@@ -72,6 +72,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'role' => $data['role'],  // 預設為一般使用者
+            'department' => $data['department'],
         ]);
 
        $sql = $this->Updata_Repository->getQueryString();

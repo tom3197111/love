@@ -30,7 +30,8 @@ class Updata_Repository
        $result =  User::where('id','=',$data['id'])->update(
             ['name' => $data['linebot_name'],
             'role' => $data['role'],
-            'email' => $data['linebot_email']]);
+            'email' => $data['linebot_email'],
+            'department' => $data['linebot_department']]);
        if($data['role'] == 'deactivate'){
             $this->ban_account_Repository($data);
        }
@@ -50,6 +51,7 @@ class Updata_Repository
         ['execute' => Auth::user()['name'],
          'user_account' => $data['linebot_name'],
          'ban_reason' => $data['ban_reason'],
+         'department' => $data['linebot_department'],
          'ban_date' =>  date("Y-m-d H:i:s")
         ]);
     }

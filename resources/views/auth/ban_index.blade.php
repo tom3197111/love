@@ -10,11 +10,12 @@
 @section('content')
 
 <div class="container">
-  <h2>Linebot管理帳號日誌</h2>
+  <h2>Linebot封鎖帳號列表</h2>
   <table class="table  table-hover table-striped table-bordered  table-condensed">
     <thead>
       <tr>
         <th>執行者</th>
+        <th>所屬部門</th>
         <th>違規者</th>
         <th>原因</th>
         <th>封鎖時間</th>
@@ -24,6 +25,7 @@
       @foreach ($ban_index as $data)
       <tr>
          <th>{{$data->execute}}</th>
+         <th>{{$data->department}}</th>
          <th>{{$data->user_account}}</th>
          <th>{{$data->ban_reason}}</th>
          <th>{{$data->ban_date}}</th>

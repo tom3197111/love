@@ -12,8 +12,10 @@ $(document).on("click", ".edit_linebot_account", function () {
      var linebot_name = $(this).data('linebot_name');
      var linebot_role = $(this).data('linebot_role');
      var linebot_email = $(this).data('linebot_email');
+     var linebot_department = $(this).data('linebot_department');
      $(".modal-body #linebot_name").val( linebot_name );
      // $(".modal-body #linebot_role").text( linebot_role );
+     $(".modal-body #linebot_department").val( linebot_department );
      $(".modal-body #linebot_email").val( linebot_email );
      $(".modal-body #linebot_id").val( linebot_id );
      $(".modal-body #role").val( linebot_role );

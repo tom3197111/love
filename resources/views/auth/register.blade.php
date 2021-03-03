@@ -49,6 +49,14 @@
                                 @enderror
                         </div>
                         <div class="form-group row">
+                            <label for="department" class="col-md-4 col-form-label text-md-right">{{ __('所屬部門') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="department" type="text" class="form-control @error('department') is-invalid @enderror" name="department" value="{{ old('department') }}" required autocomplete="department" autofocus>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('公司E-Mail ') }}</label>
 
                             <div class="col-md-6">

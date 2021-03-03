@@ -17,6 +17,7 @@ class banAccount extends Migration
             $table->bigIncrements('id');
             $table->string('execute');
             $table->string('user_account');
+            $table->string('department');
             $table->string('ban_reason');
             $table->dateTime('ban_date');
             $table->timestamps();

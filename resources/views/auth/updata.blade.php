@@ -16,6 +16,7 @@
       <tr>
         <th>員工姓名</th>
         <th>使用者權限</th>
+        <th>所屬部門</th>
         <th>公司E-Mail</th>
         <th>功能</th>
       </tr>
@@ -25,11 +26,14 @@
       <tr>
          <th>{{$data->name}}</th>
          <th>{{$data->role}}</th>
+         <th>{{$data->department}}</th>
          <th>{{$data->email}}</th>
          <th><button data-linebot_id="{{$data->id}}" 
                      data-linebot_name="{{$data->name}}"  
                      data-linebot_role="{{$data->role}}" 
-                     data-linebot_email="{{$data->email}}"class="edit_linebot_account btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"><img src="{{ asset('images/icon/edit-24px.svg') }}"></button>
+                     data-linebot_email="{{$data->email}}"
+                     data-linebot_department="{{$data->department}}"
+                     class="edit_linebot_account btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"><img src="{{ asset('images/icon/edit-24px.svg') }}"></button>
 
             <button data-linebot_id="{{$data->id}}"  class="del_linebot_account btn btn-primary btn-lg"><img src="{{ asset('images/icon/ic_delete_24px.svg') }}"></button>
          </th>
@@ -72,6 +76,12 @@
                         </select>
                         <div  id="reason"></div>
                       </th>
+                    </tr>
+                    <tr>
+                        <th>所屬部門</th>
+                        <th>
+                          <input name="linebot_department" type="text" id="linebot_department">
+                        </th>
                     </tr>
                     <tr>
                       <th>公司E-Mail</th>

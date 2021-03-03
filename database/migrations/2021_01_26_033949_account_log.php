@@ -16,7 +16,7 @@ class accountLog extends Migration
         Schema::create('account_log', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('login_account');
-            $table->string('action');
+            $table->string('action',300);
             $table->dateTime('action_date');
 
         });
